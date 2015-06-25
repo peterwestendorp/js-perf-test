@@ -2,15 +2,20 @@ var reactTestData = [],
     reactItemCount = 999,
     reactStart;
 
+var Tag = React.createClass({
+  render: function() {
+    return <li>{this.props.tag.title}</li>;
+  }
+});
+
 var TagList = React.createClass({
   render: function() {
-    var tagNodes = this.props.tags.map(function (tag) {
-      return <div key={tag.id}><span>{tag.title}</span></div>;
-    });
     return (
-      <div>
-        {tagNodes}
-      </div>
+      <ul>
+        {this.props.tags.map(function (t) {
+          return <Tag tag={t}></Tag>
+        })}
+      </ul>
     );
   },
   componentDidMount: function(){
