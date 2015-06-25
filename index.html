@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>JS performance</title>
+  <script type="text/javascript" src="angular.js"></script>
+
+  <script type="text/javascript" src="react.js"></script>
+  <script type="text/javascript" src="JSXTransformer.js"></script>
+
+  <script type="text/javascript" src="vue.js"></script>
+</head>
+</head>
+<body>
+
+  <table>
+    <tr>
+      <td>React <button onclick="startReactTest()">start</button></td>
+      <td>Angular <button onclick="startAngularTest()">start</button></td>
+      <td>Vue <button onclick="startVueTest()">start</button></td>
+    </tr>
+    <tr>
+      <td>
+        <span id="react-timer"></span>
+        <div id="react-test"></div>
+      </td>
+      <td id="angular-test">
+        <span id="angular-timer"></span>
+        <!-- <div ng-app="angular-app"> -->
+          <!-- <div ng-controller="testCtrl"> -->
+            <!-- <div ng-repeat="tag in tags"> -->
+              <!-- <child msg="{{tag.title}}"></child> -->
+            <!-- </div> -->
+          <!-- </div> -->
+        <!-- </div> -->
+      </td>
+      <td id="vue-test">
+        <span id="vue-timer"></span>
+        <div v-repeat="tag: tags">
+          <child msg="{{tag.title}}"></child>
+        </div>
+      </td>
+    </tr>
+  </table>
+
+  <script type="text/jsx" src="react-test.js"></script>
+  <script type="text/javascript" src="vue-test.js"></script>
+  <!-- // <script type="text/javascript" src="angular-test.js"></script> -->
+</body>
+</html>
